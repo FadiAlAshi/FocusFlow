@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FocusFlow - A student companion for focus, time management, and academic task tracking">
+    <meta name="author" content="UTAS Student Project">
+    <title>FocusFlow | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎯</span>
+                <span>FocusFlow</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="timer.html">Timer</a></li>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <span class="badge">Student Project · UTAS</span>
+                    <h1>Focus more, achieve more with <span class="highlight">FocusFlow</span></h1>
+                    <p class="lead">
+                        Your smart study companion. Helps you organize your time,
+                        stay focused with Pomodoro sessions, and manage your daily tasks
+                        with ease and elegance.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="timer.html" class="btn btn-primary">Start Focus Session</a>
+                        <a href="tasks.html" class="btn btn-ghost">Manage Tasks</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div><strong id="statSessions">0</strong><span>Sessions Today</span></div>
+                        <div><strong id="statTasks">0</strong><span>Tasks Done</span></div>
+                        <div><strong id="statMinutes">0</strong><span>Focus Minutes</span></div>
+                    </div>
+                </div>
+                <figure class="hero-visual">
+                    <div class="orb orb-1"></div>
+                    <div class="orb orb-2"></div>
+                    <div class="orb orb-3"></div>
+                    <div class="hero-card">
+                        <div class="hero-card-top">
+                            <span class="dot dot-r"></span>
+                            <span class="dot dot-y"></span>
+                            <span class="dot dot-g"></span>
+                        </div>
+                        <div class="hero-card-body">
+                            <p class="time-mock">25:00</p>
+                            <p class="label-mock">Focus Session</p>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="features container" id="features">
+            <header class="section-head">
+                <h2>Why FocusFlow?</h2>
+                <p>Simple, effective tools designed specifically for university students</p>
+            </header>
+            <div class="cards">
+                <article class="card">
+                    <div class="card-icon">⏱️</div>
+                    <h3>Pomodoro Timer</h3>
+                    <p>Break your time into short focus sessions (25 minutes) with breaks to boost your productivity.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">📋</div>
+                    <h3>Task Management</h3>
+                    <p>Add tasks, sort them by priority, and track your progress in a clear, organized table.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">🎵</div>
+                    <h3>Sound Alerts</h3>
+                    <p>Audio notifications at the end of each session help you transition smoothly between tasks.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Works seamlessly on phone, tablet, and desktop — study anywhere, anytime.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">💾</div>
+                    <h3>Auto Save</h3>
+                    <p>Your tasks and stats are saved locally in your browser — no signup required.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">🌙</div>
+                    <h3>Dark Mode</h3>
+                    <p>Switch between light and dark themes for comfortable late-night study sessions.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="tips">
+            <div class="container">
+                <header class="section-head">
+                    <h2>Smart Study Tips</h2>
+                    <p>Scientifically proven techniques to improve your focus and academic performance</p>
+                </header>
+                <ol class="tips-list">
+                    <li>
+                        <h4>The 25/5 Rule</h4>
+                        <p>Study with full focus for 25 minutes, then take a 5-minute break. Repeat to maximize productivity.</p>
+                    </li>
+                    <li>
+                        <h4>Distraction-Free Zone</h4>
+                        <p>Mute phone notifications and remove anything that breaks your attention before starting.</p>
+                    </li>
+                    <li>
+                        <h4>Stay Hydrated</h4>
+                        <p>Dehydration significantly reduces focus — keep a water bottle by your side at all times.</p>
+                    </li>
+                    <li>
+                        <h4>Active Recall Review</h4>
+                        <p>Test yourself instead of just re-reading — it strengthens long-term memory retention.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <div class="container cta-inner">
+                <h2>Ready to start?</h2>
+                <p>Open the focus timer now and begin your first session</p>
+                <a href="timer.html" class="btn btn-light">Start Now →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>FocusFlow</h4>
+                <p>A student project for focus and time management — UTAS</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timer.html">Timer</a></li>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 focusflow@utas.edu.om</li>
+                    <li>📍 Sultanate of Oman</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <time id="year">2026</time> FocusFlow · Made with ❤️ for CSWD1103 students</p>
+            <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

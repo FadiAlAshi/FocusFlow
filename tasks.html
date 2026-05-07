@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Tasks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎯</span>
+                <span>FocusFlow</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timer.html">Timer</a></li>
+                    <li><a href="tasks.html" class="active">Tasks</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Task Management</h1>
+                <p>Organize your study tasks and track your progress with ease</p>
+            </div>
+        </section>
+
+        <section class="container tasks-section">
+            <div class="tasks-grid">
+                <aside class="task-form-card">
+                    <h2>Add New Task</h2>
+                    <form id="taskForm" novalidate>
+                        <div class="form-group">
+                            <label for="taskTitle">Task Title *</label>
+                            <input type="text" id="taskTitle" name="title" required minlength="3" maxlength="60" placeholder="e.g. Complete CSS assignment">
+                            <small class="error-msg" id="errTitle"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="taskSubject">Subject</label>
+                            <select id="taskSubject" name="subject">
+                                <option value="General">General</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Programming">Programming</option>
+                                <option value="Mathematics">Mathematics</option>
+                                <option value="Databases">Databases</option>
+                                <option value="Networking">Networking</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="taskPriority">Priority</label>
+                                <select id="taskPriority" name="priority">
+                                    <option value="low">Low</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="taskDue">Due Date</label>
+                                <input type="date" id="taskDue" name="due">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="taskNotes">Notes (optional)</label>
+                            <textarea id="taskNotes" name="notes" rows="3" maxlength="200" placeholder="Additional details..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">+ Add Task</button>
+                    </form>
+                </aside>
+
+                <div class="task-list-card">
+                    <div class="task-list-header">
+                        <h2>Task List</h2>
+                        <div class="filter-bar">
+                            <label for="filterStatus">Show:</label>
+                            <select id="filterStatus">
+                                <option value="all">All</option>
+                                <option value="active">Active</option>
+                                <option value="done">Completed</option>
+                            </select>
+                            <input type="search" id="searchTask" placeholder="🔍 Search...">
+                        </div>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="tasks-table">
+                            <caption>List of study tasks</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">✓</th>
+                                    <th scope="col">Task</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Priority</th>
+                                    <th scope="col">Due Date</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tasksBody">
+                                <tr class="empty-row">
+                                    <td colspan="6">No tasks yet. Add your first task from the form! 🎯</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="task-summary" id="taskSummary">
+                        <div><strong id="totalTasks">0</strong><span>Total</span></div>
+                        <div><strong id="doneTasks">0</strong><span>Done</span></div>
+                        <div><strong id="activeTasks">0</strong><span>Remaining</span></div>
+                        <div class="progress-wrap">
+                            <div class="progress-bar"><span id="progressFill"></span></div>
+                            <small id="progressLabel">0%</small>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-link" id="clearAll">🗑️ Clear All Tasks</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>FocusFlow</h4>
+                <p>A student project for focus and time management — UTAS</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timer.html">Timer</a></li>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 focusflow@utas.edu.om</li>
+                    <li>📍 Sultanate of Oman</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <time id="year">2026</time> FocusFlow · Made with ❤️ for CSWD1103 students</p>
+            <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/tasks.js"></script>
+</body>
+</html>

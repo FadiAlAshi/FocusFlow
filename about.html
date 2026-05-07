@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | About</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎯</span>
+                <span>FocusFlow</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timer.html">Timer</a></li>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>The story of FocusFlow — a student companion for productivity</p>
+            </div>
+        </section>
+
+        <section class="container about-section">
+            <article class="about-text">
+                <h2>The Problem We Solve</h2>
+                <p>
+                    Many university students struggle with <strong>distraction</strong> and difficulty
+                    managing time across subjects and assignments. Long hours of studying often
+                    yield little real benefit due to a lack of planning and focus.
+                </p>
+
+                <h2>Our Solution</h2>
+                <p>
+                    We built <strong>FocusFlow</strong> as a simple yet powerful tool that combines:
+                </p>
+                <ul class="check-list">
+                    <li>The scientifically-proven Pomodoro technique for focus</li>
+                    <li>Smart task management with priorities and due dates</li>
+                    <li>Statistics that motivate you to keep going</li>
+                    <li>A clean design that works on every device</li>
+                </ul>
+
+                <h2>Our Tech Stack</h2>
+                <p>
+                    The site was built entirely using core web technologies we studied in
+                    the <em>CSWD1103</em> course:
+                </p>
+                <div class="tech-badges">
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS3</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Responsive Design</span>
+                    <span class="tech-badge">LocalStorage</span>
+                </div>
+            </article>
+
+            <aside class="about-side">
+                <figure class="team-card">
+                    <div class="avatar">👨‍💻</div>
+                    <figcaption>
+                        <h3>Development Team</h3>
+                        <p>CSWD1103 Students</p>
+                        <p class="muted">University of Technology and Applied Sciences</p>
+                    </figcaption>
+                </figure>
+
+                <div class="info-box">
+                    <h4>📊 Project Numbers</h4>
+                    <ul class="stats-list">
+                        <li><span>Pages</span><strong>4</strong></li>
+                        <li><span>Features</span><strong>10+</strong></li>
+                        <li><span>Lines of code</span><strong>1500+</strong></li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+
+        <section class="container map-section">
+            <header class="section-head">
+                <h2>Our Location</h2>
+                <p>University of Technology and Applied Sciences — Sultanate of Oman</p>
+            </header>
+            <div class="map-frame">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=58.40%2C23.55%2C58.65%2C23.65&amp;layer=mapnik&amp;marker=23.6,58.55"
+                    title="UTAS location on the map"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="container contact-section">
+            <header class="section-head">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear your feedback and suggestions to improve the site</p>
+            </header>
+
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cName">Name *</label>
+                        <input type="text" id="cName" name="name" required minlength="2" placeholder="Your full name">
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="cEmail">Email *</label>
+                        <input type="email" id="cEmail" name="email" required placeholder="example@email.com">
+                        <small class="error-msg"></small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cSubject">Subject</label>
+                    <input type="text" id="cSubject" name="subject" placeholder="Message title">
+                </div>
+
+                <div class="form-group">
+                    <label for="cType">Message Type</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="type" value="suggestion" checked> Suggestion</label>
+                        <label><input type="radio" name="type" value="bug"> Bug Report</label>
+                        <label><input type="radio" name="type" value="other"> Other</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cMessage">Your Message *</label>
+                    <textarea id="cMessage" name="message" rows="5" required minlength="10" placeholder="Write your message here..."></textarea>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label><input type="checkbox" id="cAgree" required> I agree to the terms of use and privacy policy</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Send Message 📬</button>
+
+                <div id="formSuccess" class="success-msg" hidden>
+                    ✅ Your message has been sent successfully! We'll reply soon.
+                </div>
+            </form>
+        </section>
+
+        <section class="container faq-section">
+            <header class="section-head">
+                <h2>Frequently Asked Questions</h2>
+            </header>
+            <details>
+                <summary>Is my data stored securely?</summary>
+                <p>Yes, all data is stored locally in your browser only (LocalStorage) and is never sent to any external server.</p>
+            </details>
+            <details>
+                <summary>Is the website free?</summary>
+                <p>Yes, FocusFlow is completely free and open for all students to use.</p>
+            </details>
+            <details>
+                <summary>Does it work on mobile?</summary>
+                <p>Absolutely! The site is built with Responsive Design and works on all screen sizes.</p>
+            </details>
+            <details>
+                <summary>How can I contribute to the project?</summary>
+                <p>Reach out via the form above — we'd love to hear your ideas and suggestions.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>FocusFlow</h4>
+                <p>A student project for focus and time management — UTAS</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timer.html">Timer</a></li>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 focusflow@utas.edu.om</li>
+                    <li>📍 Sultanate of Oman</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <time id="year">2026</time> FocusFlow · Made with ❤️ for CSWD1103 students</p>
+            <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

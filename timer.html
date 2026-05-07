@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Focus Timer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏱️</text></svg>">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎯</span>
+                <span>FocusFlow</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timer.html" class="active">Timer</a></li>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Focus Timer</h1>
+                <p>Use the Pomodoro technique to boost your focus and productivity</p>
+            </div>
+        </section>
+
+        <section class="timer-section container">
+            <div class="timer-tabs" role="tablist">
+                <button class="tab active" data-mode="focus" data-time="25">Focus · 25min</button>
+                <button class="tab" data-mode="short" data-time="5">Short Break · 5min</button>
+                <button class="tab" data-mode="long" data-time="15">Long Break · 15min</button>
+            </div>
+
+            <div class="timer-card">
+                <div class="timer-circle">
+                    <svg viewBox="0 0 200 200" class="progress-ring">
+                        <circle cx="100" cy="100" r="90" class="ring-bg"/>
+                        <circle cx="100" cy="100" r="90" class="ring-fg" id="progressRing"/>
+                    </svg>
+                    <div class="timer-display">
+                        <p class="time" id="timeDisplay">25:00</p>
+                        <p class="mode-label" id="modeLabel">Focus Session</p>
+                    </div>
+                </div>
+
+                <div class="timer-controls">
+                    <button class="btn btn-primary btn-lg" id="startBtn">▶ Start</button>
+                    <button class="btn btn-ghost" id="pauseBtn" disabled>⏸ Pause</button>
+                    <button class="btn btn-ghost" id="resetBtn">↺ Reset</button>
+                </div>
+
+                <div class="timer-extra">
+                    <label class="task-input-label" for="currentTask">What are you working on?</label>
+                    <input type="text" id="currentTask" placeholder="e.g. Review HTML5 chapter..." maxlength="80">
+                </div>
+            </div>
+
+            <aside class="session-stats">
+                <h3>Today's Stats</h3>
+                <ul class="stats-list">
+                    <li><span>Completed Sessions</span><strong id="sessionCount">0</strong></li>
+                    <li><span>Focus Minutes</span><strong id="minuteCount">0</strong></li>
+                    <li><span>Current Session</span><strong id="currentSession">1</strong></li>
+                </ul>
+                <button class="btn btn-link" id="resetStats">Reset Stats</button>
+            </aside>
+        </section>
+
+        <section class="container how-it-works">
+            <header class="section-head">
+                <h2>How does the Pomodoro Technique work?</h2>
+            </header>
+            <ol class="steps">
+                <li><strong>Choose a task</strong> and write it in the field above.</li>
+                <li><strong>Start the timer</strong> and work with full focus for 25 minutes.</li>
+                <li><strong>Take a short break</strong> of 5 minutes after each session.</li>
+                <li><strong>Every 4 sessions</strong>, take a long break (15 minutes) to recharge.</li>
+            </ol>
+        </section>
+
+        <audio id="alertSound" preload="auto">
+            <source src="https://cdn.jsdelivr.net/gh/anars/blank-audio/250-milliseconds-of-silence.mp3" type="audio/mpeg">
+        </audio>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>FocusFlow</h4>
+                <p>A student project for focus and time management — UTAS</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="timer.html">Timer</a></li>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 focusflow@utas.edu.om</li>
+                    <li>📍 Sultanate of Oman</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <time id="year">2026</time> FocusFlow · Made with ❤️ for CSWD1103 students</p>
+            <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/timer.js"></script>
+</body>
+</html>
